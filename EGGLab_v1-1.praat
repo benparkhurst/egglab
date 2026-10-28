@@ -155,21 +155,21 @@ endform
 at_least_one_selected = 0
 while !at_least_one_selected
 	beginPause: "Directory and Analysis method"
-		folder: "Directory", "/Users/benparkhurst/Downloads/egg_testing/phon_type"
+		folder: "Directory", "/Browse/your/WAV/and/TextGrid/input/folder/(please save wav and TextGrid files in the same folder)"
 		comment: "Enter speaker code (The data will be saved as 'speaker-egg.csv'.):"
-		sentence: "Speaker", "ben"
+		sentence: "Speaker", "M23"
 	    comment: "Enter reference tier for analysing (specify of enter [0] if there is no ref tier.):"
-		real: "Reference tier", 0
+		real: "Reference tier", 2
 		comment: "Specify or enter [all] to analyze all of the labeled intervals within the ref tier."
 		sentence: "Interval label", "all"
-		real: "Origin label tier", 0
+		real: "Origin label tier", 3
 		
 	    comment: "Please select at least one method to process your EGG signals:"
 		boolean: "Threshold method", 0
 		boolean: "dEGG method", 0
 		boolean: "Hybrid method", 1
 		boolean: "Henry Tehrani method", 0
-		positive: "dEGG crossing threshold", 0.2
+		positive: "dEGG crossing threshold", 0.25
 		positive: "dEGG crossing time step",  0.002
 		real: "Slope step", 15
 		positive: "Skew quotient threshold", 0.10
